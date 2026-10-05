@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "codegraph": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        ".agent-toolkit/codegraph.mjs",
+        "serve",
+        "--mcp"
+      ]
+    }
+  }
+}

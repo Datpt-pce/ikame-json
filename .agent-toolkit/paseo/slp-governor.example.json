@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "scopes": [
+    {
+      "root": "D:\\dedicated-slp-workspace",
+      "contract": "D:\\dedicated-slp-workspace\\slp-budget.toml",
+      "ledger": "C:\\Users\\operator\\.config\\codex-room\\slp-budget.sqlite",
+      "python": "C:\\Python312\\python.exe",
+      "reporter": "C:\\Users\\operator\\.config\\codex-room\\slp-budget.py",
+      "mode": "shadow"
+    }
+  ]
+}

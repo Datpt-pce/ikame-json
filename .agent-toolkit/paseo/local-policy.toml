@@ -1,0 +1,65 @@
+# Local policy for the Windows Codex Room installer.
+#
+# install-codex-room-windows.py first validates the upstream role overlays
+# against the Windows role contract (full access, approval never). It then
+# applies this file to the installed overlays, the Paseo provider params and
+# the Agent Profile mode. Edit this file, never the generated host files.
+# An absent file means "upstream behaviour, unchanged".
+#
+# Preview the effect (no host write):
+#   python install-codex-room-windows.py
+# Look for the LOCAL_POLICY and EFFECTIVE lines in the output.
+
+version = 1
+
+# Fallback heartbeat cadence written into the Supervisor instructions.
+# Upstream prescribes */2. Measured on this host on 2026-10-02: one heartbeat
+# turn takes about one minute, so */2 keeps a Supervisor busy for roughly a
+# third to a half of every hour. Events stay the primary wake-up signal.
+[heartbeat]
+cron = "*/10 * * * *"
+usage_report = true
+stall_intervention = true
+
+# Role permissions. DISABLED after the native-Windows acceptance run on
+# 2026-10-02. Keep both blocks commented until the role instructions and Paseo
+# approval behaviour change enough for every required smoke to pass.
+# paseo_mode_id is the Codex approval-flow setting Paseo tracks per agent
+# ("Mode" in `paseo agent inspect`); it only ever took "auto", "auto-review"
+# or "full-access" on this host on 2026-10-02 (confirmed via AvailableModes
+# on created agents for all three providers) - "read-only" is NOT a value
+# Paseo accepts for any agent, even though the installer wrote it into
+# config.json without error. Do not set paseo_mode_id to anything other
+# than auto/auto-review/full-access; it governs Paseo tool-approval, not
+# the OS/sandbox write permission, which is sandbox_mode below (a Codex
+# CODEX_HOME setting, independent of paseo_mode_id).
+#
+# [roles.supervisor]: two native-Windows trials failed acceptance. With
+# sandbox_mode = "read-only", the file probe was denied as expected, but every
+# Paseo orchestration call was also denied. The fallback trial below used
+# sandbox_mode = "workspace-write" in a dedicated empty directory: the
+# in-directory write timed out and left no file, while list_schedules, agent
+# creation and heartbeat operations were again denied because approval_policy
+# = "never" could not satisfy the requested approvals. Do not enable this
+# fallback merely because the outside-directory file was absent: the required
+# inside write and Supervisor operations did not pass.
+#
+# [roles.supervisor]
+# sandbox_mode = "workspace-write"
+# paseo_mode_id = "auto"
+#
+# [roles.peer]: the final S3/S4 fixture included
+# docs/WORKSPACE_PROTOCOL.md, but a workspace-write Peer still could not read
+# the mandatory shared protocol at
+# %USERPROFILE%\.config\codex-room\workflow\WORKSPACE_PROTOCOL.md because it
+# is outside the sandbox root. The Peer therefore stopped before either write;
+# the inside-worktree file was absent and the outside-worktree absence is not
+# proof of confinement. Enabling this block would make the current role
+# contract unusable, so it remains disabled.
+#
+# [roles.peer]
+# sandbox_mode = "workspace-write"
+# paseo_mode_id = "auto"
+#
+# roles.lead is intentionally absent: the Lead integrates and verifies, and
+# keeps the upstream permission mode.

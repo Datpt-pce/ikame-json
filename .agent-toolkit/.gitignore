@@ -1,0 +1,5 @@
+# Local generated state; keep package manifests and launcher tracked
+codegraph/node_modules/
+backups/
+install.json
+logs/

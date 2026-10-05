@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "path_base": "project-root",
+  "toolkit": {
+    "relative_path": "../mmo/MMO-Tool/github-agent-toolkit",
+    "github_repository": "Datpt-pce/mmo",
+    "github_subpath": "MMO-Tool/github-agent-toolkit",
+    "read_paths": [
+      "README.md",
+      "BOOTSTRAP.md",
+      "bundles/skill-catalog.json",
+      "contributions/README.md",
+      "contributions/skills"
+    ],
+    "contributions": {
+      "path": "contributions/skills",
+      "allow_local_candidates": true,
+      "allow_branch_push": true,
+      "branch_prefix": "toolkit/skills-"
+    }
+  },
+  "knowledge": [
+    {
+      "id": "mmo-library",
+      "relative_path": "../mmo",
+      "github_repository": "Datpt-pce/mmo",
+      "github_subpath": "MMO-Library",
+      "read_paths": [
+        "Library",
+        "MOC",
+        "Technology",
+        "Product",
+        "Operations",
+        "Data-Analysis"
+      ]
+    }
+  ],
+  "note": "Danh ba nguon va pham vi du kien; doi chieu quyen nguoi dung va identity truoc truy cap. Khong phai ACL cua he dieu hanh. Khong quet cac repo khac cung owner."
+}

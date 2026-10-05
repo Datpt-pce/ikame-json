@@ -1,0 +1,25 @@
+{
+  "version": 6,
+  "verified_at": "2026-10-02",
+  "control_plane": "paseo",
+  "topology": "supervisor-lead-peer",
+  "host_configuration": false,
+  "catalog_policy": "Check live Paseo catalog; never silently substitute a missing model.",
+  "model_source": "Read model and thinkingOptionId from the live Codex Room Paseo Agent Profile after bootstrap refresh.",
+  "profiles": {
+    "supervisor": {"id": "codex-room-supervisor", "provider": "codex-supervisor"},
+    "lead": {"id": "codex-room-lead", "provider": "codex-lead"},
+    "peer": {"id": "codex-room-peer", "provider": "codex-peer"}
+  },
+  "ownership": {
+    "supervisor": "Human contact and monitor; route project edits to Lead.",
+    "lead": "Sole technical owner; brief Peer, integrate, verify and accept/reject.",
+    "peer": "Own one bounded outcome; return evidence or blocker; do not self-accept."
+  },
+  "policy_updated_at": "2026-10-02",
+  "source_policy": "Pinned upstream commit by default; latest main is an explicit opt-in that stops on unreviewed upstream changes.",
+  "local_policy": "paseo/local-policy.toml is applied after the upstream contract check. The fallback heartbeat is active; per-role sandbox blocks ship disabled because the 2026-10-02 native-Windows smoke did not pass.",
+  "effective_permissions": "Read the EFFECTIVE lines of the installer preview or run codex-room-windows.py --print-effective <role>. The verified host currently uses the upstream danger-full-access baseline for all three roles.",
+  "acceptance_workflow": "paseo/SLP-WORKFLOW.md: Human-approved threat model and budget, host probe, audited acceptance matrix frozen before source, three verification tiers, class-level rejects and a circuit breaker.",
+  "source": "https://github.com/hoangnb24/codex-room-setup/tree/348129092cb1bf92176f062bca0ca0ddda3cfbfe"
+}

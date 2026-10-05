@@ -1,0 +1,12 @@
+# Copy to a story/slice-owned path and change every value before a pilot.
+version = 1
+story = "PSW-002"
+slice = "usage-report"
+mode = "shadow"
+preset = "balanced"
+max_total_tokens = 2000000
+validation_reserve_tokens = 600000
+
+[thresholds]
+warn_percent = 70
+restricted_percent = 85

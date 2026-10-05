@@ -1,0 +1,5 @@
+{
+  "id": "slp-cost-governor",
+  "description": "Scope-limited SLP dispatch admission using one-use budget permits",
+  "requirements": { "paseo": ">=0.10.2 <0.11.0" }
+}

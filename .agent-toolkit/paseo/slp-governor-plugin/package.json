@@ -1,0 +1,14 @@
+{
+  "name": "slp-cost-governor",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "test": "node --test server/policy.test.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@getpaseo/plugin": "0.10.2",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}

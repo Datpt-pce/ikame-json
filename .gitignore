@@ -1,0 +1,16 @@
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies, logs, and editor/OS state
+node_modules/
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
