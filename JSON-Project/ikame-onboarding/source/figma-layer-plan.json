@@ -1,0 +1,266 @@
+{
+  "file_key": "mmMqlJ5drO1IhYTaHDCm7f",
+  "root_node_id": "6726:55902",
+  "version": "2405301451468091566",
+  "outputs": [
+    {
+      "file": "welcome-1.json",
+      "width": 750,
+      "height": 1320,
+      "fps": 30,
+      "speed_multiplier": 1.5,
+      "include_frame_fill": true,
+      "scenes": [
+        {
+          "id": "welcome_hallo",
+          "source_frame_id": "6726:38391",
+          "start": 0,
+          "end": 90,
+          "reading_seconds": 3,
+          "rationale": "Establish the world map, speaker, then reveal the short greeting.",
+          "layers": [
+            { "node_id": "6726:38392", "kind": "image", "role": "background", "motion": "fade", "persist": true },
+            { "node_id": "6726:38395", "kind": "image", "role": "background", "motion": "fade", "persist": true },
+            { "node_id": "6726:41843", "kind": "image", "role": "background", "motion": "fade", "persist": true },
+            { "node_id": "6726:41863", "kind": "image", "role": "visual", "motion": "pop", "delay": 3, "persist": true },
+            { "node_id": "6726:41869", "kind": "shape", "role": "ui", "motion": "pop", "delay": 15, "persist": true },
+            { "node_id": "6726:41870", "kind": "image", "role": "text", "motion": "typing", "delay": 27, "persist": true }
+          ]
+        },
+        {
+          "id": "welcome_konnichiwa",
+          "source_frame_id": "6726:41910",
+          "start": 90,
+          "end": 165,
+          "reading_seconds": 2.5,
+          "rationale": "Add the second speaker, then give the Japanese greeting time to register.",
+          "layers": [
+            { "node_id": "6726:45373", "kind": "image", "role": "visual", "motion": "pop", "persist": true },
+            { "node_id": "6726:45379", "kind": "shape", "role": "ui", "motion": "pop", "delay": 10, "persist": true },
+            { "node_id": "6726:45380", "kind": "image", "role": "text", "motion": "typing", "delay": 20, "persist": true }
+          ]
+        },
+        {
+          "id": "welcome_hello",
+          "source_frame_id": "6726:45408",
+          "start": 165,
+          "end": 240,
+          "reading_seconds": 2.5,
+          "rationale": "Add the third speaker before revealing the English greeting.",
+          "layers": [
+            { "node_id": "6726:48862", "kind": "image", "role": "visual", "motion": "pop", "persist": true },
+            { "node_id": "6726:48868", "kind": "shape", "role": "ui", "motion": "pop", "delay": 10, "persist": true },
+            { "node_id": "6726:48869", "kind": "image", "role": "text", "motion": "typing", "delay": 20, "persist": true }
+          ]
+        },
+        {
+          "id": "welcome_nihao",
+          "source_frame_id": "6726:48906",
+          "start": 240,
+          "end": 315,
+          "reading_seconds": 2.5,
+          "rationale": "Add the fourth speaker before revealing the Chinese greeting.",
+          "layers": [
+            { "node_id": "6726:52387", "kind": "image", "role": "visual", "motion": "pop", "persist": true },
+            { "node_id": "6726:52393", "kind": "shape", "role": "ui", "motion": "pop", "delay": 10, "persist": true },
+            { "node_id": "6726:52394", "kind": "image", "role": "text", "motion": "typing", "delay": 20, "persist": true }
+          ]
+        },
+        {
+          "id": "welcome_ciao",
+          "source_frame_id": "6726:52404",
+          "start": 315,
+          "end": 405,
+          "reading_seconds": 3,
+          "rationale": "Complete the composition and hold the final greeting before exit.",
+          "layers": [
+            { "node_id": "6726:55894", "kind": "image", "role": "visual", "motion": "pop", "persist": true },
+            { "node_id": "6726:55900", "kind": "shape", "role": "ui", "motion": "pop", "delay": 12, "persist": true },
+            { "node_id": "6726:55901", "kind": "image", "role": "text", "motion": "typing", "delay": 24, "persist": true }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "on-1.json",
+      "width": 750,
+      "height": 1084,
+      "fps": 30,
+      "speed_multiplier": 1.5,
+      "scenes": [
+        {
+          "id": "call_intro",
+          "source_frame_id": "6726:142868",
+          "start": 0,
+          "end": 105,
+          "reading_seconds": 3.5,
+          "rationale": "Show the call screen first, then reveal the title and tutor name.",
+          "layers": [
+            { "node_id": "6726:142869", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:142870", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:142871", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:142872", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:142880", "kind": "image", "role": "text", "motion": "typing", "delay": 24 },
+            { "node_id": "6726:142881", "kind": "image", "role": "text", "motion": "typing", "delay": 39 }
+          ]
+        },
+        {
+          "id": "call_greeting",
+          "source_frame_id": "6726:142933",
+          "start": 105,
+          "end": 225,
+          "reading_seconds": 4,
+          "rationale": "Reveal the tutor, chat, and lower controls in visual order before typing the greeting.",
+          "layers": [
+            { "node_id": "6726:142934", "kind": "image", "role": "background", "motion": "fade", "shared": true },
+            { "node_id": "6726:142936", "kind": "image", "role": "background", "motion": "fade", "shared": true },
+            { "node_id": "6726:142937", "kind": "image", "role": "background", "motion": "fade", "shared": true },
+            { "node_id": "6726:142938", "kind": "image", "role": "ui", "motion": "rise", "delay": 27, "shared": true },
+            { "node_id": "6726:142948", "kind": "image", "role": "visual", "motion": "pop", "delay": 3, "shared": true },
+            { "node_id": "6726:142949", "kind": "shape", "role": "ui", "motion": "pop", "delay": 18 },
+            { "node_id": "6726:142953", "kind": "image", "role": "text", "motion": "typing", "delay": 39 }
+          ]
+        },
+        {
+          "id": "call_question",
+          "source_frame_id": "6726:142954",
+          "start": 225,
+          "end": 375,
+          "reading_seconds": 5,
+          "rationale": "Allow time to read and process the full tutor question.",
+          "layers": [
+            { "node_id": "6726:142969", "kind": "shape", "role": "ui", "motion": "pop", "delay": 18 },
+            { "node_id": "6726:142973", "kind": "image", "role": "text", "motion": "typing", "delay": 33 }
+          ]
+        },
+        {
+          "id": "learner_answer",
+          "source_frame_id": "6726:142882",
+          "start": 375,
+          "end": 495,
+          "reading_seconds": 4,
+          "rationale": "Reveal the recording state, then type the learner response.",
+          "layers": [
+            { "node_id": "6726:142897", "kind": "image", "role": "ui", "motion": "pulse", "delay": 12 },
+            { "node_id": "6726:142898", "kind": "shape", "role": "ui", "motion": "pop", "delay": 18 },
+            { "node_id": "6726:142899", "kind": "image", "role": "ui", "motion": "pop", "delay": 24 },
+            { "node_id": "6726:142907", "kind": "image", "role": "text", "motion": "typing", "delay": 36 }
+          ]
+        },
+        {
+          "id": "tutor_feedback",
+          "source_frame_id": "6726:142908",
+          "start": 495,
+          "end": 675,
+          "reading_seconds": 6,
+          "rationale": "Give the corrective sentence a long final hold for comfortable reading.",
+          "layers": [
+            { "node_id": "6726:142923", "kind": "shape", "role": "ui", "motion": "pop", "delay": 18 },
+            { "node_id": "6726:142924", "kind": "image", "role": "ui", "motion": "pop", "delay": 24 },
+            { "node_id": "6726:142932", "kind": "image", "role": "text", "motion": "typing", "delay": 36 }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "on-2.json",
+      "width": 750,
+      "height": 1068,
+      "fps": 30,
+      "speed_multiplier": 1.5,
+      "scenes": [
+        {
+          "id": "phrase_lesson",
+          "source_frame_id": "6726:143021",
+          "start": 0,
+          "end": 270,
+          "reading_seconds": 9,
+          "rationale": "Introduce the lesson visual first, then reveal Spanish, English, and pronunciation in order.",
+          "layers": [
+            { "node_id": "6726:143022", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:143023", "kind": "image", "role": "background", "motion": "fade", "delay": 3 },
+            { "node_id": "6726:143024", "kind": "image", "role": "text", "motion": "typing", "delay": 42 },
+            { "node_id": "6726:143027", "kind": "image", "role": "ui", "motion": "wipe", "delay": 72 },
+            { "node_id": "6726:143025", "kind": "image", "role": "text", "motion": "typing", "delay": 90 },
+            { "node_id": "6726:143026", "kind": "image", "role": "text", "motion": "typing", "delay": 132 },
+            { "node_id": "6726:143028", "kind": "image", "role": "visual", "motion": "rise", "delay": 12 },
+            { "node_id": "6726:143029", "kind": "image", "role": "background", "motion": "fade", "delay": 6 }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "on-3.json",
+      "width": 750,
+      "height": 1068,
+      "fps": 30,
+      "speed_multiplier": 1.5,
+      "scenes": [
+        {
+          "id": "method_comparison",
+          "source_frame_id": "6726:143073",
+          "start": 0,
+          "end": 240,
+          "reading_seconds": 8,
+          "rationale": "Build the summary card and chart progressively, then hold all comparison labels for scanning.",
+          "layers": [
+            { "node_id": "6726:143075", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:143076", "kind": "image", "role": "background", "motion": "fade", "delay": 3 },
+            { "node_id": "6726:143077", "kind": "image", "role": "background", "motion": "fade", "delay": 3 },
+            { "node_id": "6726:143078", "kind": "image", "role": "background", "motion": "fade", "delay": 6 },
+            { "node_id": "6726:143082", "kind": "image", "role": "ui", "motion": "rise", "delay": 36 },
+            { "node_id": "6726:143083", "kind": "image", "role": "visual", "motion": "pop", "delay": 48 },
+            { "node_id": "6726:143105", "kind": "image", "role": "visual", "motion": "wipe", "delay": 54 },
+            { "node_id": "6726:143125", "kind": "image", "role": "visual", "motion": "pop", "delay": 60 },
+            { "node_id": "6726:143111", "kind": "image", "role": "visual", "motion": "rise", "delay": 66 },
+            { "node_id": "6726:143110", "kind": "image", "role": "text", "motion": "typing", "delay": 84 },
+            { "node_id": "6726:143112", "kind": "image", "role": "text", "motion": "typing", "delay": 102 },
+            { "node_id": "6726:143115", "kind": "image", "role": "visual", "motion": "rise", "delay": 72 },
+            { "node_id": "6726:143114", "kind": "image", "role": "text", "motion": "typing", "delay": 90 },
+            { "node_id": "6726:143116", "kind": "image", "role": "text", "motion": "typing", "delay": 108 },
+            { "node_id": "6726:143119", "kind": "image", "role": "visual", "motion": "rise", "delay": 78 },
+            { "node_id": "6726:143118", "kind": "image", "role": "text", "motion": "typing", "delay": 96 },
+            { "node_id": "6726:143120", "kind": "image", "role": "text", "motion": "typing", "delay": 114 },
+            { "node_id": "6726:143123", "kind": "image", "role": "visual", "motion": "rise", "delay": 84 },
+            { "node_id": "6726:143122", "kind": "image", "role": "text", "motion": "typing", "delay": 102 },
+            { "node_id": "6726:143124", "kind": "image", "role": "text", "motion": "typing", "delay": 120 },
+            { "node_id": "6726:143150", "kind": "image", "role": "ui", "motion": "pop", "delay": 126 },
+            { "node_id": "6726:143151", "kind": "image", "role": "text", "motion": "typing", "delay": 132 },
+            { "node_id": "6726:143153", "kind": "image", "role": "ui", "motion": "pop", "delay": 132 },
+            { "node_id": "6726:143154", "kind": "image", "role": "text", "motion": "typing", "delay": 138 },
+            { "node_id": "6726:143155", "kind": "shape", "role": "ui", "motion": "rise", "delay": 12 },
+            { "node_id": "6726:143157", "kind": "image", "role": "visual", "motion": "pop", "delay": 21 },
+            { "node_id": "6726:143159", "kind": "image", "role": "text", "motion": "typing", "delay": 33 },
+            { "node_id": "6726:143160", "kind": "image", "role": "text", "motion": "typing", "delay": 51 },
+            { "node_id": "6726:143161", "kind": "image", "role": "ui", "motion": "wipe", "delay": 18 },
+            { "node_id": "6726:143163", "kind": "image", "role": "visual", "motion": "pop", "delay": 24 },
+            { "node_id": "6726:143165", "kind": "image", "role": "text", "motion": "typing", "delay": 36 },
+            { "node_id": "6726:143166", "kind": "image", "role": "text", "motion": "typing", "delay": 54 }
+          ]
+        },
+        {
+          "id": "learning_journey",
+          "source_frame_id": "6726:143031",
+          "start": 240,
+          "end": 405,
+          "reading_seconds": 5.5,
+          "rationale": "Reveal the graduate visual, then trace the learning milestones from bottom to top.",
+          "layers": [
+            { "node_id": "6726:143032", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:143035", "kind": "image", "role": "background", "motion": "fade" },
+            { "node_id": "6726:143034", "kind": "image", "role": "visual", "motion": "rise", "delay": 6 },
+            { "node_id": "6726:143037", "kind": "image", "role": "ui", "motion": "rise", "delay": 114 },
+            { "node_id": "6726:143038", "kind": "image", "role": "ui", "motion": "pop", "delay": 84 },
+            { "node_id": "6726:143039", "kind": "image", "role": "visual", "motion": "pop", "delay": 90 },
+            { "node_id": "6726:143045", "kind": "image", "role": "ui", "motion": "pop", "delay": 60 },
+            { "node_id": "6726:143060", "kind": "image", "role": "visual", "motion": "pop", "delay": 66 },
+            { "node_id": "6726:143046", "kind": "image", "role": "ui", "motion": "pop", "delay": 36 },
+            { "node_id": "6726:143047", "kind": "image", "role": "visual", "motion": "pop", "delay": 42 },
+            { "node_id": "6726:143053", "kind": "image", "role": "ui", "motion": "pop", "delay": 18 },
+            { "node_id": "6726:143054", "kind": "image", "role": "visual", "motion": "pop", "delay": 24 }
+          ]
+        }
+      ]
+    }
+  ]
+}
